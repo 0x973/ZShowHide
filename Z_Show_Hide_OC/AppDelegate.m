@@ -31,6 +31,7 @@
 
 //show按钮
 - (IBAction)showClick:(NSButton *)sender {
+    //这边不会真实调用
     NSAppleEventDescriptor *eventDescriptor = nil;
     NSAppleScript *script = nil;
     NSString *scriptSource = @"do shell script \"defaults write com.apple.finder AppleShowAllFiles Yes && killall Finder\"";

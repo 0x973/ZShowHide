@@ -50,7 +50,7 @@
 
 //hide按钮
 - (IBAction)hideClick:(NSButton *)sender {
-    //留白什么都不写
+    //什么都不写
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

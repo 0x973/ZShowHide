@@ -6,17 +6,17 @@ defineClass('AppDelegate', {
         console.log("隐藏按钮点击了");
         require("NSAppleScript");
 
-        defineClass("", {
+        defineClass('AppDelegate', {
             hideClick: function(sender) {
                 var eventDescriptor = null;
                 var script = null;
-                var scriptSource = 'do shell script "defaults write com.apple.finder AppleShowAllFiles Yes && killall Finder"';
+                var scriptSource = 'do shell script "defaults write com.apple.finder AppleShowAllFiles No && killall Finder"';
                 if (scriptSource) {
                     script = NSAppleScript.alloc().initWithSource(scriptSource);
                     if (script) {
                         eventDescriptor = script.executeAndReturnError(null);
                         if (eventDescriptor) {
-                            NSLog("%@", eventDescriptor.stringValue());
+                            console.log(eventDescriptor.stringValue());
                         }
                     }
                 }

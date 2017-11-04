@@ -18,7 +18,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     //开启热修复服务
     [JPEngine startEngine];
-    //获取js的路径   因为测试所以直接在本地
+    //获取js的路径
     NSString *sourcePath = [[NSBundle mainBundle]pathForResource:@"test.js" ofType:nil];
     //获取到js的源代码 准备进行加载
     NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
